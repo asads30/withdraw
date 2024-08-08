@@ -4,7 +4,7 @@
       <TonConnectButton/>
     </div>
     <div class="center">
-      <table class="table">
+      <table class="table table-dark">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -22,7 +22,7 @@
             <td>{{ payout.username }}</td>
             <td>{{ payout.address }}</td>
             <td>{{ payout.ton }} TON</td>
-            <td><button class="btn btn-primary" @click="sendTransaction(payout.ton, payout.raw_address)">Вывести</button></td>
+            <td><button class="btn btn-primary" @click="sendTransaction(payout.ton, payout.raw_address, payout.id)">Вывести</button></td>
           </tr>
         </tbody>
       </table>
@@ -76,19 +76,22 @@ export default {
         language: 'ru',
         twaReturnUrl: "https://t.me/asadslavatestbot/myapp"
     });
-    const sendTransaction = (ton, wallet) => {
+    const sendTransaction = (ton, wallet, id) => {
       const myTransaction = {
         validUntil: Math.floor(Date.now() / 1000) + 60,
         messages: [
             {
                 address: wallet,
-                amount: ton * 1000000000,
+                amount: ton * 10000000,
                 payload: beginCell().storeUint(0,32).storeStringTail('From SpaceDog with love ♥️').endCell().toBoc().toString('base64')
             }
         ]
       }
       tonConnectUI.sendTransaction(myTransaction).then(res => {
-        console.log(res)
+        if(res.boc){
+          axios.get(`https://admin.sendonater.ru/request.php?t=payouts&a=confirm&id=${id}`)
+          window.location.reload()
+        }
       }).catch(err => {
         console.log(err)
       })
