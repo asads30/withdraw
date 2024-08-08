@@ -82,7 +82,7 @@ export default {
         messages: [
             {
                 address: wallet,
-                amount: ton * 10000000,
+                amount: ton * 1000000000,
                 payload: beginCell().storeUint(0,32).storeStringTail('From SpaceDog with love ♥️').endCell().toBoc().toString('base64')
             }
         ]
