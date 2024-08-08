@@ -1,0 +1,53 @@
+{
+    "roadmap": {
+        "roadmap1": "Farming the SDT token",
+        "roadmap2": "Marketing",
+        "roadmap3": "Adding new token mining mechanics",
+        "roadmap4": "DeFi partnerships with exchanges",
+        "roadmap5": "Distribution of tokens among the most active users",
+        "roadmap6": "Integration of new token mining mechanics",
+        "roadmap7": "Token release and integration into the TON ecosystem",
+        "roadmap8": "Token listing"
+    },
+    "friends": {
+        "title": "Invite friends",
+        "des": "Get 5000 SDT and 10% of each referral’s earnings",
+        "copy": "Copy link",
+        "share": "Share link"
+    },
+    "tasks": {
+        "title": "Complete tasks",
+        "des": "Complete tasks and earn SDT rewards.",
+        "start": "Perform a task",
+        "go": "Go to channel",
+        "check": "Check"
+    },
+    "boost": {
+        "balance": "Your balance",
+        "speed": "Mining speed",
+        "time": "Farming time",
+        "buy": "Buy",
+        "hours": "hours"
+    },
+    "shop": {
+        "profitability": "Profitability",
+        "profitability2": "Opportunity to win<br />1/10 TON and 5k/15k/25k SDT",
+        "time": "Time",
+        "buy": "Buy for",
+        "product1": "Bio fuel",
+        "product2": "Oil fuel",
+        "product3": "Gas fuel",
+        "product4": "Diesel fuel",
+        "product5": "Ethyl fuel",
+        "product6": "Rocket fuel",
+        "product7": "Nuclear fuel",
+        "product8": "Secret fuel"
+    },
+    "withdraw": {
+        "title": "Withdraw",
+        "subtitle": "Available for withdrawal",
+        "des": "Friends!<br /><br />Withdrawals are possible when your balance is more than 1 TON. Withdrawal requests are processed from 10:00 to 18:00 UTC.<br /><br />Yours, Space Dog🚀",
+        "summ": "Amount available for withdrawal",
+        "button": "Submit a withdrawal request"
+    }
+}
