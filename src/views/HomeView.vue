@@ -12,7 +12,8 @@
             <th scope="col">Username</th>
             <th scope="col">Адрес</th>
             <th scope="col">Сумма</th>
-            <th scope="col">Действие</th>
+            <th scope="col">Вывод</th>
+            <th scope="col">Оплатить</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
             <td>{{ payout.address }}</td>
             <td>{{ payout.ton }} TON</td>
             <td><button class="btn btn-primary" @click="sendTransaction(payout.ton, payout.raw_address, payout.id)">Вывести</button></td>
+            <td><button class="btn btn-success" @click="confirmTransaction(payout.id)">Отметить как оплачено</button></td>
           </tr>
         </tbody>
       </table>
@@ -96,7 +98,11 @@ export default {
         console.log(err)
       })
     }
-    return {sendTransaction}
+    const confirmTransaction = (id) => {
+      axios.get(`https://admin.sendonater.ru/request.php?t=payouts&a=confirm&id=${id}`)
+      window.location.reload()
+    }
+    return {sendTransaction, confirmTransaction}
   }
 }
 </script>
